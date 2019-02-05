@@ -10,9 +10,6 @@
         }
         
         stage ('Build Docker Image') {
-            when  {
-                 branch 'master'
-            }
             
             steps {
                 script {
@@ -27,9 +24,6 @@
         
         stage ('Push Docker Image') {
             
-            when {
-                    branch 'master'
-            }
             
             steps {
                 script {
