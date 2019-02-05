@@ -16,7 +16,7 @@ pipeline {
             
             steps {
                 scripts {
-                          app = docker.build ("purikap/node-app")
+                          app = docker.build("purikap/node-app")
                     app.inside {
                         
                         sh 'echo $(curl localhost:8080)'
