@@ -34,7 +34,7 @@ pipeline {
             steps {
                 scripts {
                         
-                    docker.withRegistry('https://registry.hub.docker.com','purikap') {
+                    docker.withRegistry('https://registry.hub.docker.com','docker_hub_login') {
                         
                             app.push("$(env.BUILD_NUMBER)")
                             app.push("latest")
