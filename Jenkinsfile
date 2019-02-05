@@ -1,4 +1,4 @@
-pipeline {
+ pipeline {
     agent any
     stages {
         stage('Build') {
@@ -15,7 +15,7 @@ pipeline {
             }
             
             steps {
-                scripts {
+                script {
                           app = docker.build("purikap/node-app")
                     app.inside {
                         
